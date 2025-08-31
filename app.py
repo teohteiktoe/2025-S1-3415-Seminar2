@@ -17,7 +17,7 @@ def main():
 def dbs():
     exchangeRate= float(request.form.get("exchangeRate"))
     name = request.form.get("name")
-    return render_template("dbs.html", price = round((-50.6*exchangeRate)+90.229,2), name= name)
+    return render_template("dbs.html", price = round((-134.78037764710447*exchangeRate)+216.1259937496639,2), name= name)
 
 if __name__ == "__main__": 
     app.run(port= 3345)
