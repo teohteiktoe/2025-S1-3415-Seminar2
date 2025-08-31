@@ -53,8 +53,9 @@
 <body>
     <div class = "container">
         <h2> The predicted DBS share price is {{price}} </h2>
-        <form action = "/index" method = "POST">
+        <form action = "/main" method = "POST">
             <input type = "submit" value ="Main">
+            <input type="hidden" name="name" value="{{ name }}">
         </form>
 
     </div>

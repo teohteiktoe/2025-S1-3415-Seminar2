@@ -16,10 +16,11 @@ def main():
 @app.route("/dbs", methods =["GET", "POST"])
 def dbs():
     exchangeRate= float(request.form.get("exchangeRate"))
-    return render_template("dbs.html", price = round((-50.6*exchangeRate)+90.229,2))
+    name = request.form.get("name")
+    return render_template("dbs.html", price = round((-50.6*exchangeRate)+90.229,2), name= name)
 
 if __name__ == "__main__": 
-    app.run(port= 3000)
+    app.run(port= 3345)
 
 
 
