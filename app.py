@@ -10,13 +10,13 @@ def index():
 
 @app.route("/main", methods =["GET", "POST"])
 def main():
-    return render_template("main.html")
-
+    name= str(request.form.get("name"))
+    return render_template("main.html", name=name)
 
 @app.route("/dbs", methods =["GET", "POST"])
 def dbs():
-    q= float(request.form.get("q"))
-    return render_template("dbs.html", r = round((-50.6*q)+90.229,2))
+    exchangeRate= float(request.form.get("exchangeRate"))
+    return render_template("dbs.html", price = round((-50.6*exchangeRate)+90.229,2))
 
 if __name__ == "__main__": 
     app.run(port= 3000)
